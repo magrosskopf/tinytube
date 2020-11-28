@@ -5,8 +5,10 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 var cors = require('cors')
 
+const {google} = require('googleapis');
 
-const postRoutes = require('./api/routes/post');
+
+/*
 const userRoutes = require('./api/routes/user');
 
 
@@ -31,10 +33,9 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use('/posts', postRoutes);
 app.use('/users', userRoutes);
 
-
+*/
 app.use((req, res, next) => {
     const error = new Error('Not found');
     error.status = 404;
